@@ -37,6 +37,10 @@ function rl_Level1_draw(ctx){
 	this.button2.draw(ctx);
 	this.button3.draw(ctx);
 	this.button4.draw(ctx);
+
+	ctx.font= "30px 'Gugi";
+	ctx.fillText("How should you start an ",150,50);
+	ctx.fillText("impossible quiz?",165,100);
 }
 
 function rl_Level1_click(x, y){
@@ -50,17 +54,19 @@ function rl_Level1_click(x, y){
 	}
 	if(this.button3.hitTest(x, y)){
 		console.log("Changing level...")
-		//return new rlLevel1();
+		return new rlMenu();
 	}
 	if(this.button4.hitTest(x, y)){
 		console.log("Changing level...")
-		//return new rlLevel1();
+		return new rlMenu();
 	}
 }
 
 function rl_Level1_mouse_move(x, y){
 	this.button1.hitTest(x, y);
 	this.button2.hitTest(x, y);
+	this.button3.hitTest(x, y);
+	this.button4.hitTest(x, y);
 
 
 }

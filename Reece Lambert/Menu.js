@@ -12,7 +12,7 @@ function rlMenu(){
 	this.button1.colorHighlighted = "#800000";
 	this.button1.textColor = "#000000";
 
-	this.button2 = new Button(325,200,225,70, "Options");
+	this.button2 = new Button(325,200,225,70, "Instructions");
 	this.button2.color = "#FF0000";
 	this.button2.colorHighlighted = "#800000";
 	this.button2.textColor = "#000000";
