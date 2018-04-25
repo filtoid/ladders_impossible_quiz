@@ -7,17 +7,12 @@ var canvas = null; // The main drawing area
 var currentTime = 0; // For debugging - you can store the current time and see how it's changed
 
 var cur_screen = null;
-
 function loadGame(){
 	canvas = document.getElementById('canvas');
 	ctx = canvas.getContext('2d');
 
-  $('#canvas').mousedown(OnCanvasClick);
-	$('#canvas').mousemove(OnMouseMove);
-
 	// Do setup code here - make resources/assign things etc
-  cur_screen = new PJMenu();
-
+cur_screen = new LWMenu();
 	// The following line sets up the game loop
 	setInterval(update, SECONDSBETWEENFRAMES * 500);
   console.log("We have loaded the game");
@@ -32,21 +27,8 @@ function update(){
 	ctx.save();
 
 	//Do you drawing here - make your resources draw themselves
-  cur_screen.update();
-  cur_screen.draw(ctx);
+cur_screen.update();
+cur_screen.draw(ctx);
 
 	ctx.restore();
-}
-
-function OnCanvasClick(e){
-	var mouseX = e.pageX - this.offsetLeft;
-	var mouseY = e.pageY - this.offsetTop;
-
-	cur_screen = cur_screen.click(mouseX,mouseY);
-}
-
-function OnMouseMove(e){
-	var mouseX = e.pageX - this.offsetLeft;
-	var mouseY = e.pageY - this.offsetTop;
-	cur_screen.mouseMove(mouseX,mouseY);
 }
