@@ -16,7 +16,7 @@ Then commit those changes:
   git commit
 ```
 (To enter a message in vim press 'i' then type your message then hit 'esc' then ':wq')
-Once you have committed your code then:
+Once you have committed your code then push it so that it goes up to Github:
 ```
   git push
 ```
