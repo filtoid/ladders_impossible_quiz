@@ -30,7 +30,7 @@ function lw_level1_draw(ctx){
 
 function lw_level1_click(x, y){
   if (this.button2.hitTest(x, y)) {
-    return new LWMenu();
+    return new LWohwell();
   }
   return this;
 }
