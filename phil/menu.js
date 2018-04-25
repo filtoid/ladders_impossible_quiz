@@ -8,6 +8,9 @@ function PJMenu(){
     this.firstButtonHighlighted = false;
 
     this.button1 = new Button(20, 20, 150, 100, "Start");
+    this.button1.color = "#f4a142";
+    this.button1.colorHighlighted = "#ffbc70";
+    this.button1.textColor = "#000000";
 }
 
 function pj_menu_update(){
@@ -32,9 +35,4 @@ function pj_menu_click(x, y){
 
 function pj_menu_mouse_move(x, y){
   this.button1.hitTest(x, y);
-  // if(x > 20 && x < 170 && y > 20 && y < 120){
-  //   this.firstButtonHighlighted = true;
-  // }else{
-  //   this.firstButtonHighlighted = false;
-  // }
 }
