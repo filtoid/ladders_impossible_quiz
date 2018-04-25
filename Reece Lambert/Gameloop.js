@@ -39,7 +39,6 @@ function update(){
 function OnCanvasClick(e){
 	var mouseX = e.pageX - this.offsetLeft;
 	var mouseY = e.pageY - this.offsetTop;
-
 	cur_screen = cur_screen.click(mouseX,mouseY);
 }
 
