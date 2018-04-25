@@ -26,6 +26,10 @@ function update(){
 	ctx.save();
 
 	//Do you drawing here - make your resources draw themselves
+  ctx.fillRect(20,20,150,100);
+
+  ctx.font = "30px Arial";
+  ctx.fillText("Hello World",200,50);
 
 	ctx.restore();
 }
