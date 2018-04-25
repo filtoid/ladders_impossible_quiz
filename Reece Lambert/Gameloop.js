@@ -11,6 +11,9 @@ function loadGame(){
 	canvas = document.getElementById('canvas');
 	ctx = canvas.getContext('2d');
 
+	$('#canvas').mousedown(OnCanvasClick);
+	$('#canvas').mousemove(OnMouseMove);
+
 	// Do setup code here - make resources/assign things etc
 	cur_screen = new rlMenu();
 	// The following line sets up the game loop
@@ -31,4 +34,17 @@ function update(){
 	cur_screen.update();
 	cur_screen.draw(ctx);
 	ctx.restore();
+}
+
+function OnCanvasClick(e){
+	var mouseX = e.pageX - this.offsetLeft;
+	var mouseY = e.pageY - this.offsetTop;
+
+	cur_screen = cur_screen.click(mouseX,mouseY);
+}
+
+function OnMouseMove(e){
+	var mouseX = e.pageX - this.offsetLeft;
+	var mouseY = e.pageY - this.offsetTop;
+	cur_screen.mouseMove(mouseX,mouseY);
 }
