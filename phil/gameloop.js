@@ -6,11 +6,14 @@ var ctx = null; // Useful to have a global reference for measuring fonts for ins
 var canvas = null; // The main drawing area
 var currentTime = 0; // For debugging - you can store the current time and see how it's changed
 
+var cur_screen = null;
+
 function loadGame(){
 	canvas = document.getElementById('canvas');
 	ctx = canvas.getContext('2d');
 
 	// Do setup code here - make resources/assign things etc
+  cur_screen = new PJMenu();
 
 	// The following line sets up the game loop
 	setInterval(update, SECONDSBETWEENFRAMES * 500);
@@ -26,6 +29,8 @@ function update(){
 	ctx.save();
 
 	//Do you drawing here - make your resources draw themselves
-
+  cur_screen.update();
+  cur_screen.draw(ctx);
+  
 	ctx.restore();
 }
