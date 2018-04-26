@@ -15,7 +15,7 @@ function rlLevel1() {
 
 	this.button4 = new Button(450,300,275,80, "Easily");
 
-	this.circle = new Circle (40,40,50,50,"1");
+	this.circle = new Circle (50,50,50,50,"1");
 }
 
 function rl_Level1_update(){
@@ -39,19 +39,19 @@ function rl_Level1_draw(ctx){
 function rl_Level1_click(x, y){
 	console.log("Clicked at: " + x + ", " + y);
 	if(this.button1.hitTest(x, y)){
-		console.log("Changing level...")
+		console.log("Changing level...");
 		return new rlMenu();
 	}
 	if(this.button2.hitTest(x, y)){
-		console.log("Changing level...")
+		console.log("Changing level...");
 		return new rlMenu();
 	}
 	if(this.button3.hitTest(x, y)){
-		console.log("Changing level...")
+		console.log("Changing level...");
 		return new rlMenu();
 	}
 	if(this.button4.hitTest(x, y)){
-		console.log("Changing level...")
+		console.log("Changing level...");
 		return new rlMenu();
 	}
 	return this;

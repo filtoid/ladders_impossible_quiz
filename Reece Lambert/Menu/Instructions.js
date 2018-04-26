@@ -28,7 +28,7 @@ function rl_instructions_draw(ctx){
 function rl_instructions_click(x, y){
 	console.log("Clicked at: " + x + ", " + y);
 	if(this.button1.hitTest(x, y)){
-		console.log("Changing to Menu")
+		console.log("Changing to Menu");
 		return new rlMenu();
 	}
 	return this;

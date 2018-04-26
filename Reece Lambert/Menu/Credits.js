@@ -7,7 +7,7 @@ function rlCredits(){
 
 	this.firstButtonHighlighted = false;
 
-	this.button1 = new Button(262,450,275,80, "Back to Menu")
+	this.button1 = new Button(262,450,275,80, "Back to Menu");
 }
 
 function rl_credits_update(){
@@ -33,7 +33,7 @@ function rl_credits_draw(ctx){
 function rl_credits_click(x, y){
 	console.log("Clicked at: " + x + ", " + y);
 	if(this.button1.hitTest(x, y)){
-		console.log("Changing level..")
+		console.log("Changing level..");
 		return new rlMenu();
 	}
 	return this;
