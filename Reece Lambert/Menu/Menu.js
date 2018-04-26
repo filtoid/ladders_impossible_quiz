@@ -38,16 +38,16 @@ function rl_menu_draw(ctx){
 function rl_menu_click(x, y){
 	console.log("Clicked at: " + x + ", " + y);
 	if(this.button1.hitTest(x, y)){
-		console.log("Changing level...")
+		console.log("Changing level..")
 		return new rlLevel1();
 	}
 	if(this.button2.hitTest(x, y)){
 		console.log("Changing level...")
-		//return new rlLevel1();
+		return new rlInstructions();
 	}
 	if(this.button3.hitTest(x, y)){
 		console.log("Changing level...")
-		//return new rlLevel1();
+		return new rlCredits();
 	}
 	if(this.button4.hitTest(x, y)){
 		console.log("Changing level...")
