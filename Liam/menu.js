@@ -32,7 +32,9 @@ function lw_menu_draw(ctx){
 
 }
 function lw_menu_click(x, y){
-  console.log("Clicked at: " + x + ", " + y);
+  if(this.button1.hitTest(x, y)){
+    return new LWlevel1();
+  }
   return this;
 }
 
