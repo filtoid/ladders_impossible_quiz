@@ -5,10 +5,10 @@ function Location(_x, _y){
 function Button(_x, _y, _w, _h, _text){
   this.loc = new Location(_x, _y);
   this.size = new Location(_w, _h);
-  this.color = "#00ff00";
-  this.colorHighlighted = "#0000ff";
+  this.color = "#404040";
+  this.colorHighlighted = "#828282";
   this.text = _text;
-  this.textColor = "#ff0000";
+  this.textColor = "#000000";
   this.highlighted = false;
 
   this.draw = button_draw;
@@ -24,7 +24,7 @@ function button_draw(ctx){
   }else{
     ctx.fillStyle = this.color;
   }
-  ctx.font = "20px Arial";
+  ctx.font = "25px Raleway bold";
 
   ctx.fillRect(this.loc.x, this.loc.y, this.size.x, this.size.y);
 

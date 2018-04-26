@@ -7,25 +7,17 @@ function rlMenu(){
 
 	this.firstButtonHighlighted = false;
 
-	this.button1 = new Button(50, 200, 225, 70, "Start");
-	this.button1.color = "#FF0000";
-	this.button1.colorHighlighted = "#800000";
-	this.button1.textColor = "#000000";
+	this.button1 = new Button(75,200,275,80, "Start");
+	//Examples of changing the color, highlighted color and text color
+	//this.button1.color = "#FF0000";
+	//this.button1.colorHighlighted = "#800000";
+	//this.button1.textColor = "#000000";
 
-	this.button2 = new Button(325,200,225,70, "Instructions");
-	this.button2.color = "#FF0000";
-	this.button2.colorHighlighted = "#800000";
-	this.button2.textColor = "#000000";
+	this.button2 = new Button(450,200,275,80, "Instructions");
 
-	this.button3 = new Button(50,300,225,70, "Credits");
-	this.button3.color = "#FF0000";
-	this.button3.colorHighlighted = "#800000";
-	this.button3.textColor = "#000000";
+	this.button3 = new Button(75,300,275,80, "Credits");
 
-	this.button4 = new Button(325,300,225,70, "Secret Link");
-	this.button4.color = "#FF0000";
-	this.button4.colorHighlighted = "#800000";
-	this.button4.textColor = "#000000";
+	this.button4 = new Button(450,300,275,80, "Secret Link");
 }
 
 function rl_menu_update(){
@@ -37,9 +29,10 @@ function rl_menu_draw(ctx){
 	this.button2.draw(ctx);
 	this.button3.draw(ctx);
 	this.button4.draw(ctx);
+	
 
-	ctx.font= "30px 'Gugi";
-	ctx.fillText("The Highly Improbable Quiz",100,50);
+	ctx.font= "40px Gugi";
+	ctx.fillText("The Highly Improbable Quiz",140,50);
 }
 
 function rl_menu_click(x, y){
@@ -60,6 +53,7 @@ function rl_menu_click(x, y){
 		console.log("Changing level...")
 		//return new rlLevel1();
 	}
+	return this;
 	
 }
 
@@ -68,6 +62,7 @@ function rl_menu_mouse_move(x, y){
 	this.button2.hitTest(x, y);
 	this.button3.hitTest(x, y);
 	this.button4.hitTest(x, y);
+	
 
 
 }
