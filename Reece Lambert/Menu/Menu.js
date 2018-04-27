@@ -20,6 +20,9 @@ function rlMenu(){
 
 	this.button4 = new Button(450,400,275,80, "Secret Link");
 
+	var x = document.getElementById("inputBox");
+	x.style.display = "none";
+
 }
 
 function rl_menu_update(){
@@ -70,3 +73,5 @@ function rl_menu_mouse_move(x, y){
 	this.button4.hitTest(x, y);
 	
 }
+
+
