@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+	<!-- code is 3 2 7 9 -->
 	<head>
 		<link rel="stylesheet" type="text/css" href="Menu/Main.css">
 		<link href="https://fonts.googleapis.com/css?family=Gugi|Raleway" rel="stylesheet" rel="stylesheet">
@@ -24,12 +25,14 @@
 
 	</head>
 	<body onload="loadGame()">
-		<div></div>
-		<div id="canvas-div" style="width:800px; height:600px; margin:0px auto; border-width: 0px 3px; border-style:solid; border-color:#000000; padding: 0px 1%;" >
-			<canvas id="canvas" width="800px" height="600px">
+		<!---->
+		<div id="canvas-div" class="canvas-class" style="width:800px; height:650px; margin:0px auto; border-width: 0px 5px; border-style:dashed; border-color:#050505; border-radius: 50px; padding: 0px 1%;" >
+			<canvas id="canvas" width="800px" height="650px" style="position: absolute;">
+				
 				<p>Your browser does not support the canvas element.</p>
 				<!--1-(75,200,275,80) 2-(450,200,275,80) 3-(75,300,275,80) 4-(450,300,275,80) -->
 			</canvas>
+			<div id="inputCode"><input type="text" id="inputBox"></div>
 		</div>
 	</body>
 </html>

@@ -8,13 +8,13 @@ function rlLevel2() {
 
 	this.firstButtonHighlighted = false;
 
-	this.button1 = new Button(75,200,275,80, "Carefully");
+	this.button1 = new Button(75,300,275,80, "Carefully");
 
-	this.button2 = new Button(450,200,275,80, "Eagerly");
+	this.button2 = new Button(450,300,275,80, "Eagerly");
 
-	this.button3 = new Button(75,300,275,80, "You can't");
+	this.button3 = new Button(75,400,275,80, "You can't");
 
-	this.button4 = new Button(450,300,275,80, "With ease");
+	this.button4 = new Button(450,400,275,80, "With ease");
 
 	this.circle = new Circle (50,50,50,50,"2");
 

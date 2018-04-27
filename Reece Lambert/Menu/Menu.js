@@ -8,17 +8,17 @@ function rlMenu(){
 
 	this.firstButtonHighlighted = false;
 
-	this.button1 = new Button(75,200,275,80, "Start");
+	this.button1 = new Button(75,300,275,80, "Start");
 	//Examples of changing the color, highlighted color and text color
 	//this.button1.color = "#FF0000";
 	//this.button1.colorHighlighted = "#800000";
 	//this.button1.textColor = "#000000";
 
-	this.button2 = new Button(450,200,275,80, "Instructions");
+	this.button2 = new Button(450,300,275,80, "Instructions");
 
-	this.button3 = new Button(75,300,275,80, "Credits");
+	this.button3 = new Button(75,400,275,80, "Credits");
 
-	this.button4 = new Button(450,300,275,80, "Secret Link");
+	this.button4 = new Button(450,400,275,80, "Secret Link");
 
 }
 

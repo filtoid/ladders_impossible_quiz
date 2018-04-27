@@ -8,9 +8,9 @@ function rlFailed() {
 
 	this.firstButtonHighlighted = false;
 
-	this.button1 = new Button(75,400,275,80, "You're damn right");
+	this.button1 = new Button(75,450,275,80, "You're damn right");
 
-	this.button2 = new Button(450,400,275,80, "Nah, i'm out");
+	this.button2 = new Button(450,450,275,80, "Nah, i'm out");
 
 }
 
