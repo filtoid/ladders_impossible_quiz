@@ -38,7 +38,7 @@ function rl_failed_click(x, y){
 	}
 	if(this.button2.hitTest(x, y)){
 		console.log("Changing level...");
-		return new rlMenu();
+		return new rlCredits();
 	}
 	return this;
 

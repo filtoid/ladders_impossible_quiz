@@ -1,4 +1,5 @@
 function rlCredits(){
+
 	this.update = rl_credits_update;
 	this.draw = rl_credits_draw;
 
@@ -15,6 +16,7 @@ function rl_credits_update(){
 }
 
 function rl_credits_draw(ctx){
+
 	this.button1.draw(ctx);
 	
 
@@ -27,22 +29,20 @@ function rl_credits_draw(ctx){
 	ctx.fillText("Camera Guy - Dude with hoodie",170,300);
 	ctx.fillText("Stunt Dude - Dude with hoodie",180,350);
 	ctx.fillText("The guy with a hood - Dude with hoodie",120,400);
-
 }
 
 function rl_credits_click(x, y){
+
 	console.log("Clicked at: " + x + ", " + y);
 	if(this.button1.hitTest(x, y)){
 		console.log("Changing level..");
 		return new rlMenu();
 	}
+
 	return this;
-	
 }
 
 function rl_credits_mouse_move(x, y){
+
 	this.button1.hitTest(x, y);
-	
-
-
 }

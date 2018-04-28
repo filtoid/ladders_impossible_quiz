@@ -15,12 +15,25 @@ function rlMenu(){
 	//this.button1.textColor = "#000000";
 
 	this.button2 = new Button(450,300,275,80, "Instructions");
-
 	this.button3 = new Button(75,400,275,80, "Credits");
 
+	//For the input box in level 3
+
 	var x = document.getElementById("inputBox");
+
 	x.style.display = "none";
 
+	//For the secret link that appears in the menu after 6249 on level 3
+
+	var y = document.getElementById("secretLinkText");
+
+	if (y.innerHTML == "Secret Link") {
+		y.style.display = "block";
+	}
+
+	else {
+		y.style.display = "none";
+	}
 }
 
 function rl_menu_update(){
@@ -35,26 +48,33 @@ function rl_menu_draw(ctx){
 
 	ctx.font= "40px Gugi";
 	ctx.fillText("The Highly Improbable Quiz",140,50);
-
 }
 
 function rl_menu_click(x, y){
 
 	console.log("Clicked at: " + x + ", " + y);
 	if(this.button1.hitTest(x, y)){
+		var x = document.getElementById("secretLinkText");
+		x.style.display = "none"
 		console.log("Changing level..");
 		return new rlLevel1();
 	}
+
 	if(this.button2.hitTest(x, y)){
+		var x = document.getElementById("secretLinkText");
+		x.style.display = "none"
 		console.log("Changing level...");
 		return new rlInstructions();
 	}
+
 	if(this.button3.hitTest(x, y)){
+		var x = document.getElementById("secretLinkText");
+		x.style.display = "none"
 		console.log("Changing level...");
 		return new rlCredits();
 	}
+
 	return this;
-	
 }
 
 function rl_menu_mouse_move(x, y){
@@ -62,7 +82,4 @@ function rl_menu_mouse_move(x, y){
 	this.button1.hitTest(x, y);
 	this.button2.hitTest(x, y);
 	this.button3.hitTest(x, y);
-	
 }
-
-
