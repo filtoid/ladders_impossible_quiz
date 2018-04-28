@@ -9,10 +9,6 @@ function rlLevel4(){
 	this.firstButtonHighlighted = false;
 
 	this.button1 = new Button(75,300,275,80, "Start");
-	//Examples of changing the color, highlighted color and text color
-	//this.button1.color = "#FF0000";
-	//this.button1.colorHighlighted = "#800000";
-	//this.button1.textColor = "#000000";
 
 	this.button2 = new Button(450,300,275,80, "Instructions");
 

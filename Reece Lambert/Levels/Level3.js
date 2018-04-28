@@ -30,12 +30,16 @@ function rlLevel3() {
 
 	this.button0 = new Button(360,550,80,80, "0");
 
-	this.buttonEnter = new Button(460,550,80,80, "<=J");
+	this.buttonEnter = new Button(460,550,80,80, "Ent");
 
 	this.circle = new Circle (50,50,50,50,"3");
 
 	var x = document.getElementById("inputBox");
 	x.style.display = "block";
+	x.value = "";
+
+	var y = document.getElementById("secretCode");
+	y.style.display = "block";
 
 }
 
@@ -60,7 +64,8 @@ function rl_level3_draw(ctx){
 	this.circle.draw(ctx);
 
 	ctx.font= "40px Gugi";
-	ctx.fillText("Inspect to find the code",170,50);
+	ctx.fillText("Ah, we have been 'inspecting'",130,50);
+	ctx.fillText("you",365,100);
 
 }
 
@@ -69,63 +74,94 @@ function rl_level3_click(x, y){
 	console.log("Clicked at: " + x + ", " + y);
 	if(this.button1.hitTest(x, y)){
 		console.log("inputed 1");
+		var x = document.getElementById("inputBox").value;
+		document.getElementById("inputBox").value  = x + "1";
 
 	}
 	if(this.button2.hitTest(x, y)){
 		console.log("inputed 2");
+		var x = document.getElementById("inputBox").value;
+		document.getElementById("inputBox").value  = x + "2";
 
 	}
 	if(this.button3.hitTest(x, y)){
 		console.log("inputed 3");
+		var x = document.getElementById("inputBox").value;
+		document.getElementById("inputBox").value  = x + "3";
 		
 	}
 	if(this.button4.hitTest(x, y)){
 		console.log("inputed 4");
+		var x = document.getElementById("inputBox").value;
+		document.getElementById("inputBox").value  = x + "4";
 		
 	}
 	if(this.button5.hitTest(x, y)){
 		console.log("inputed 5");
+		var x = document.getElementById("inputBox").value;
+		document.getElementById("inputBox").value  = x + "5";
 		
 	}
 	if(this.button6.hitTest(x, y)){
 		console.log("inputed 6");
+		var x = document.getElementById("inputBox").value;
+		document.getElementById("inputBox").value  = x + "6";
 		
 	}
 	if(this.button7.hitTest(x, y)){
 		console.log("inputed 7");
+		var x = document.getElementById("inputBox").value;
+		document.getElementById("inputBox").value  = x + "7";
 		
 	}
 	if(this.button8.hitTest(x, y)){
 		console.log("inputed 8");
+		var x = document.getElementById("inputBox").value;
+		document.getElementById("inputBox").value  = x + "8";
 		
 	}
 	if(this.button9.hitTest(x, y)){
 		console.log("inputed 9");
+		var x = document.getElementById("inputBox").value;
+		document.getElementById("inputBox").value  = x + "9";
 		
 	}
 	if(this.button0.hitTest(x, y)){
 		console.log("inputed 0");
+		var x = document.getElementById("inputBox").value;
+		document.getElementById("inputBox").value  = x + "0";
 		
 	}
 	if(this.buttonEnter.hitTest(x, y)){
 		console.log("inputed Enter");
-		var c = document.getElementById("inputBox").value;
-		if (c === "3279"){
-			console.log("code inputed was: " + c);
+		var x = document.getElementById("inputBox").value;
+		if (x === "3279"){
+			console.log("code inputed was: " + x);
 			return new rlLevel4();
-			
+		}
+		else if (x === "6249"){
+			console.log("code inputed was: " + x);
+			document.getElementById("inputBox").value = "Link in menu";
+			var y = document.getElementById("secretLinkText");
+			y.style.display = "block";
+			setTimeout(function fadeAway(){
+				document.getElementById("inputBox").value = "";
+			} ,3000);
+
 		}
 		else {
-			console.log("code inputed was: " + c);
-			var x = document.getElementById("inputBox");
-			x.style.display = "none";
+			console.log("code inputed was: " + x);
+			var y = document.getElementById("inputBox");
+			y.style.display = "none";
 			return new rlFailed();	
 		}
 	}
 	if(this.buttonDelete.hitTest(x, y)){
 		console.log("inputed Delete");
-
-		
+		var x = document.getElementById("inputBox").value;
+		var y = x.substring(0, x.length - 1);
+		document.getElementById("inputBox").value = y;
+		console.log("code is now: " + y);
 	}
 	return this;
 

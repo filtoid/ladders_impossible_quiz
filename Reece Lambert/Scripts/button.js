@@ -24,7 +24,7 @@ function button_draw(ctx){
   }else{
     ctx.fillStyle = this.color;
   }
-  ctx.font = "25px Raleway bold";
+  ctx.font = "25px Raleway";
 
   ctx.fillRect(this.loc.x, this.loc.y, this.size.x, this.size.y);
 
