@@ -38,6 +38,7 @@ canvas, as they will be positioned relative to the canvas*/
 }
 
 #inputCode input {
+	display: none;
 	text-align: center;
 	font: 40px "Gugi";
 	color: #000000;

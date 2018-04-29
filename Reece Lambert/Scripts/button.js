@@ -12,6 +12,7 @@ function Button(_x, _y, _w, _h, _text){
   this.highlighted = false;
 
   this.draw = button_draw;
+  this.draw2 = button_draw2;
   this.hitTest = button_hit_test;
 }
 
@@ -31,6 +32,30 @@ function button_draw(ctx){
   var txt_width = ctx.measureText(this.text).width;
   var txt_height = 18;
   // console.log(ctx.measureText(this.text));
+  ctx.fillStyle = this.textColor;
+  ctx.fillText(this.text, this.loc.x+ ((this.size.x/2) - (txt_width/2)) , this.loc.y + ((this.size.y/2) + (txt_height/2)));
+
+  ctx.font = old_font;
+  ctx.fillStyle = old_color;
+}
+
+//For the level 5 answer
+function button_draw2(ctx){
+  var old_font = ctx.font;
+  var old_color = ctx.fillStyle;
+
+  if(this.highlighted){
+    ctx.fillStyle = this.colorHighlighted;
+  }else{
+    ctx.fillStyle = this.color;
+  }
+  ctx.font = "40px Gugi";
+
+  ctx.fillRect(this.loc.x, this.loc.y, this.size.x, this.size.y);
+
+  var txt_width = ctx.measureText(this.text).width;
+  var txt_height = 25;
+ 
   ctx.fillStyle = this.textColor;
   ctx.fillText(this.text, this.loc.x+ ((this.size.x/2) - (txt_width/2)) , this.loc.y + ((this.size.y/2) + (txt_height/2)));
 

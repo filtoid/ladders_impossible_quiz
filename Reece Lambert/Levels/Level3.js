@@ -126,6 +126,8 @@ function rl_level3_click(x, y){
 
 		if (x === "3279"){
 			console.log("code inputed was: " + x);
+			var x = document.getElementById("inputBox");
+		x.style.display = "none";
 			return new rlLevel4();
 		}
 
