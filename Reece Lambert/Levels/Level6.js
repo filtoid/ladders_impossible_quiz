@@ -8,10 +8,10 @@ function rlLevel6() {
 
 	this.firstButtonHighlighted = false;
 
-	this.button1 = new Button(75,300,275,80, "Police Officer");
-	this.button2 = new Button(450,300,275,80, "Lawyer");
-	this.button3 = new Button(75,400,275,80, "Footballer");
-	this.button4 = new Button(450,400,275,80, "Chef");
+	this.button1 = new Button(75,300,275,80, "A Pencil");
+	this.button2 = new Button(450,300,275,80, "A Pen");
+	this.button3 = new Button(75,400,275,80, "A ruler");
+	this.button4 = new Button(450,400,275,80, "A rubber");
 	this.circle = new Circle (50,50,50,50,"6");
 }
 
@@ -28,15 +28,16 @@ function rl_level6_draw(ctx){
 	this.circle.draw(ctx);
 
 	ctx.font= "40px Gugi";
-	ctx.fillText("Which of these professions",140,50);		
+	ctx.fillText("What kind of stationary is",160,50);
+	ctx.fillText("easy to sell?",280,100);	
 }
 
 function rl_level6_click(x, y){
 
 	console.log("Clicked at: " + x + ", " + y);
 	if(this.button1.hitTest(x, y)){
-		console.log("Failed...");
-		return new rlFailed();
+		console.log("Changing Level..");
+		return new rlLevel7();
 	}
 
 	if(this.button2.hitTest(x, y)){

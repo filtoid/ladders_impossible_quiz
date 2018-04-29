@@ -135,7 +135,7 @@ function rl_level3_click(x, y){
 			console.log("code inputed was: " + x);
 			document.getElementById("secretLinkText").innerHTML = "Secret Link";
 			document.getElementById("inputBox").value = "Link in menu";
-			setTimeout(function fadeAway(){
+			setTimeout(function rlfadeAway(){
 				document.getElementById("inputBox").value = "";
 			} ,3000);
 		}
