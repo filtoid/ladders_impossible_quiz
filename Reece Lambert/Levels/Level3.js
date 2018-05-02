@@ -148,6 +148,15 @@ function rl_level3_click(x, y){
 			} ,3000);
 		}
 
+		// When enter is clicked and the code is 1472580369, hide  
+		// the input box and change to level 21
+		else if  (x === "1472580369"){
+			console.log("code inputed was: " + x);
+			var x = document.getElementById("rlInputBoxL3");
+			x.style.display = "none";
+			return new rlLevel21();
+		}
+
 		// If neither 3279 or 6249 is inputted, change the
 		// canvas to the failed screen
 		else {

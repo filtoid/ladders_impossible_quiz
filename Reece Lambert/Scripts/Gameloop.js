@@ -16,7 +16,7 @@ function loadGame(){
 	$(document).keydown(onKeyDown);
 
 	// Do setup code here - make resources/assign things etc
-	cur_screen = new rlLevel17();
+	cur_screen = new rlMenu();
 	// The following line sets up the game loop
 	setInterval(update, SECONDSBETWEENFRAMES * 500);
 
