@@ -40,6 +40,7 @@ function PJLevel3(){
     for(var i=0; i<this.buttons.length; i++){
         if(this.buttons[i].hitTest(x, y)){
             // Move to next level
+            return new PJLevel4();
         }
       }
     return this;
