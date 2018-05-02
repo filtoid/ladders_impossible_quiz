@@ -8,7 +8,7 @@ function PJLevel1(){
   this.buttons = [];
   this.buttons.push(new Button(120, 120, 150, 100, "Quit"));
   this.buttons.push(new Button(320, 120, 150, 100, "QUIT"));
-  this.buttons.push(new Button(160, 260, 150, 100, "QU1T"));
+  this.buttons.push(new Button(120, 260, 150, 100, "QU1T"));
   this.buttons.push(new Button(320, 260, 150, 100, "!Quit!"));
 
   // this.button1 = new Button(120, 120, 150, 100, "Quit");
