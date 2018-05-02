@@ -13,10 +13,11 @@ function rlLevel7() {
 	this.button3 = new Button(75,400,275,80, "A horse named Jim");
 	this.button4 = new Button(450,400,275,80, "A rubber");
 	this.circle = new Circle (50,50,50,50,"7");
+	this.keyPressed = rlLevel7KeyPressed;
 }
 
 function rl_level7_update(){
-  
+
 }
 
 function rl_level7_draw(ctx){
@@ -66,11 +67,13 @@ function rl_level7_mouse_move(x, y){
 	this.button4.hitTest(x, y);
 }
 
-function rlMKeyPressed() {
-	var x = document.getElementById("rlInputBoxL7");
-	if (x.value == "m" || x.value == "M") {
+function rlLevel7KeyPressed(key) {
+	console.log(key);
+	if (key == 'm' || key =='M') {
 		console.log("Changing Level..");
-		x.style.display = "none";
 		return new rlLevel8();
 	}
+	return this;
+
 }
+
