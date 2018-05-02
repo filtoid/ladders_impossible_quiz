@@ -8,11 +8,13 @@ function rlLevel18() {
 
 	this.firstButtonHighlighted = false;
 
-	this.button1 = new Button(75,300,275,80, "Jerry");
-	this.button2 = new Button(450,300,275,80, "Jeff");
-	this.button3 = new Button(75,400,275,80, "Jim");
-	this.button4 = new Button(450,400,275,80, "Shananany");
-	this.circle = new Circle (50,50,50,50,"9");
+	this.buttonEnter = new Button(700,240,80,80, "Ent");
+
+	this.circle = new Circle (50,50,50,50,"18");
+
+	var x = document.getElementById("rlInputBoxL18");
+	x.style.display = "block";
+	x.value = "";
 }
 
 function rl_level18_update(){
@@ -21,46 +23,41 @@ function rl_level18_update(){
 
 function rl_level18_draw(ctx){
 	
-	this.button1.draw(ctx);
-	this.button2.draw(ctx);
-	this.button3.draw(ctx);
-	this.button4.draw(ctx);
 	this.circle.draw(ctx);
+	this.buttonEnter.draw(ctx);
 
 	ctx.font= "40px Gugi";
-	ctx.fillText("What is my horse called?",150,50);	
+	ctx.fillText("#FF0000",0,150);
+	ctx.fillText("#FFA500",0,200);	
+	ctx.fillText("#FFFF00",0,250);	
+	ctx.fillText("#00FF00",0,300);	
+	ctx.fillText("#00FFFF",0,350);	
+	ctx.fillText("#FF00FF",0,400);	
+	ctx.fillText("#FF0000",0,450);	
 }
 
 function rl_level18_click(x, y){
+	if(this.buttonEnter.hitTest(x, y)){
+		console.log("inputed Enter");
+		var x = document.getElementById("rlInputBoxL18");
+		x.style.display = "none";
+		var y = x.value
 
-	console.log("Clicked at: " + x + ", " + y);
-	if(this.button1.hitTest(x, y)){
-		console.log("Failed...");
-		return new rlFailed();
+		if (y === "rainbow" || y === "Rainbow" || y === "RAINBOW"){
+			console.log("code inputed was: " + y);
+			
+			return new rlLevel19();
+		}
+
+		else {
+			console.log("Failed..");
+			return new rlFailed();
+		}
 	}
-
-	if(this.button2.hitTest(x, y)){
-		console.log("Failed...");
-		return new rlFailed();
-	}
-
-	if(this.button3.hitTest(x, y)){
-		console.log("Failed...");
-		return new rlLevel11();
-	}
-
-	if(this.button4.hitTest(x, y)){
-		console.log("Failed...");
-		return new rlFailed();
-	}
-
 	return this;
 }
 
 function rl_level18_mouse_move(x, y){
 
-	this.button1.hitTest(x, y);
-	this.button2.hitTest(x, y);
-	this.button3.hitTest(x, y);
-	this.button4.hitTest(x, y);
+	this.buttonEnter.hitTest(x, y);
 }

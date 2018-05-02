@@ -8,7 +8,8 @@ body {
 /* This god awful line of code allows elements to be positioned inside of the 
 canvas, as they will be positioned relative to the canvas*/
 #canvas, #secretLinkAtr, #secretLinkAtr #secretLinkText, 
-#rlInputCodeL3, #rlInputCodeL3 #rlInputBoxL3  {
+#rlInputCodeL3, #rlInputCodeL3 #rlInputBoxL3, #rlInputCodeL18, 
+#rlInputCodeL18 #rlInputBoxL18  {
 	position: absolute;
 }
 
@@ -47,6 +48,24 @@ canvas, as they will be positioned relative to the canvas*/
 	height: 80px;
 	left: 260px;
 	top: 120px;
+    border-radius: 20px;
+}
+
+/* input box for level 18 */
+#rlInputCodeL18 {
+	text-align: center;
+	z-index: 1;
+}
+
+#rlInputCodeL18 #rlInputBoxL18 {
+	display: none;
+	text-align: center;
+	font: 40px "Gugi";
+	color: #000000;
+    width: 430px;
+	height: 80px;
+	left: 220px;
+	top: 238px;
     border-radius: 20px;
 }
 

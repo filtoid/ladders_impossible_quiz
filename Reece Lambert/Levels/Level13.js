@@ -8,11 +8,11 @@ function rlLevel13() {
 
 	this.firstButtonHighlighted = false;
 
-	this.button1 = new Button(75,300,275,80, "Jerry");
-	this.button2 = new Button(450,300,275,80, "Jeff");
-	this.button3 = new Button(75,400,275,80, "Jim");
-	this.button4 = new Button(450,400,275,80, "Shananany");
-	this.circle = new Circle (50,50,50,50,"9");
+	this.button1 = new Button(75,300,275,80, "A Quad");
+	this.button2 = new Button(450,300,275,80, "A Squad");
+	this.button3 = new Button(75,400,275,80, "A group");
+	this.button4 = new Button(450,400,275,80, "A gathering");
+	this.circle = new Circle (50,50,50,50,"13");
 }
 
 function rl_level13_update(){
@@ -28,7 +28,8 @@ function rl_level13_draw(ctx){
 	this.circle.draw(ctx);
 
 	ctx.font= "40px Gugi";
-	ctx.fillText("What is my horse called?",150,50);	
+	ctx.fillText("What is a group of squid",170,50);
+	ctx.fillText("called?",340,100);
 }
 
 function rl_level13_click(x, y){
@@ -40,13 +41,13 @@ function rl_level13_click(x, y){
 	}
 
 	if(this.button2.hitTest(x, y)){
-		console.log("Failed...");
-		return new rlFailed();
+		console.log("Changing Level..");
+		return new rlLevel14();
 	}
 
 	if(this.button3.hitTest(x, y)){
 		console.log("Failed...");
-		return new rlLevel11();
+		return new rlFailed();
 	}
 
 	if(this.button4.hitTest(x, y)){
