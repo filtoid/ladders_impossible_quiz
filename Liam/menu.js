@@ -6,10 +6,14 @@ function LWMenu(){
   this.mouseMove = lw_menu_mouse_move;
 
   this.firstButtonHighlighted = false;
-  this.button1 = new Button(250, 160, 200, 150, "Start");
+  this.button1 = new Button(250, 160, 450, 150, "Start");
   this.button1.color = '#f28f04'
   this.button1.colorHighlighted = '#ffbc70'
   this.button1.textColor = '#000000'
+  this.button2 = new Button(250, 375, 450, 150, "Credits");
+  this.button2.color = '#f28f04'
+  this.button2.colorHighlighted = '#ffbc70'
+  this.button2.textColor = '#000000'
 }
 
 function lw_menu_update(){
@@ -20,26 +24,27 @@ function lw_menu_update(){
 function lw_menu_draw(ctx){
 
   this.button1.draw(ctx)
+  this.button2.draw(ctx)
 
-  ctx.fillStyle = '#f28f04'
-  ctx.fillRect(495,160,200,150);
-  ctx.fillStyle = '#f28f04'
-  ctx.fillRect(250,375,450,150)
-  ctx.fillStyle = '#000000'
   ctx.font = "30px Arial";
-  ctx.fillText("Impossible Quiz",350,50);
-  ctx.fillStyle = '#00000'
+  ctx.fillStyle = '#000000'
+  ctx.fillText("D&D Quiz",400,50);
+
 
 }
 function lw_menu_click(x, y){
   if(this.button1.hitTest(x, y)){
     return new LWlevel1();
   }
+  if(this.button2.hitTest(x, y)){
+    return new LWcredits
+  }
   return this;
 }
 
 function lw_menu_mouse_move(x, y){
 this.button1.hitTest(x, y)
+this.button2.hitTest(x, y)
 
 
 }
