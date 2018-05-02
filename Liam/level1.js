@@ -28,7 +28,12 @@ function lw_level1_draw(ctx){
   ctx.fillStyle = '#00000'
 }
 
+
+
 function lw_level1_click(x, y){
+  if (this.button1.hitTest(x, y)){
+    return new LWlevel2();
+  }
   if (this.button2.hitTest(x, y)) {
     return new LWohwell();
   }
