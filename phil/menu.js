@@ -8,10 +8,10 @@ function PJMenu(){
     this.firstButtonHighlighted = false;
 
     this.buttons = []
-    this.buttons.push(new Button(20, 20, 150, 100, "Start"));
-    this.buttons.push(new Button(20, 140, 150, 100, "About"));
-    this.buttons.push(new Button(20, 260, 150, 100, "Another Button"));
-    this.buttons.push(new Button(190, 260, 150, 100, "one more Button"));
+    this.buttons.push(new Button(190, 260, 150, 100, "Start"));
+    // this.buttons.push(new Button(20, 140, 150, 100, "About"));
+    // this.buttons.push(new Button(20, 260, 150, 100, "Another Button"));
+    // this.buttons.push(new Button(190, 260, 150, 100, "one more Button"));
 
     for(var i=0;i<this.buttons.length;i++){
       this.buttons[i].color = "#f4a142";

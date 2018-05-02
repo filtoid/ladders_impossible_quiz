@@ -14,8 +14,8 @@ function loadGame(){
 
   $('#canvas').mousedown(OnCanvasClick);
 	$('#canvas').mousemove(OnMouseMove);
-	$(document).onKeyDown(onKeyDown);
-	
+	$(document).keydown(onKeyDown);
+
 	// Do setup code here - make resources/assign things etc
   cur_screen = new PJMenu();
 
