@@ -13,12 +13,14 @@ function loadGame(){
 
 	$('#canvas').mousedown(OnCanvasClick);
 	$('#canvas').mousemove(OnMouseMove);
+	$(document).keydown(onKeyDown);
 
 	// Do setup code here - make resources/assign things etc
-	cur_screen = new rlMenu();
+	cur_screen = new rlLevel9();
 	// The following line sets up the game loop
 	setInterval(update, SECONDSBETWEENFRAMES * 500);
-  console.log("We have loaded the game");
+
+	console.log("We have loaded the game");
 }
 
 function update(){
@@ -46,4 +48,14 @@ function OnMouseMove(e){
 	var mouseX = e.pageX - this.offsetLeft;
 	var mouseY = e.pageY - this.offsetTop;
 	cur_screen.mouseMove(mouseX,mouseY);
+}
+
+function onKeyDown(evt)
+{
+	//alert(String.fromCharCode(evt.which||evt.keyCode));
+	var key=String.fromCharCode(evt.which||evt.keyCode);
+ 
+	if(cur_screen.keyPressed != undefined){
+		cur_screen = cur_screen.keyPressed(key);
+	}
 }

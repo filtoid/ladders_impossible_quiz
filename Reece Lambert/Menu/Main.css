@@ -7,7 +7,8 @@ body {
 
 /* This god awful line of code allows elements to be positioned inside of the 
 canvas, as they will be positioned relative to the canvas*/
-#canvas, #secretLinkAtr, #secretLinkAtr #secretLinkText, #inputCode, #inputCode input  {
+#canvas, #secretLinkAtr, #secretLinkAtr #secretLinkText, 
+#rlInputCodeL3, #rlInputCodeL3 #rlInputBoxL3  {
 	position: absolute;
 }
 
@@ -32,12 +33,12 @@ canvas, as they will be positioned relative to the canvas*/
 }
 
 /* input box for level 3 */
-#inputCode {
+#rlInputCodeL3 {
 	text-align: center;
 	z-index: 1;
 }
 
-#inputCode input {
+#rlInputCodeL3 #rlInputBoxL3 {
 	display: none;
 	text-align: center;
 	font: 40px "Gugi";
@@ -50,7 +51,7 @@ canvas, as they will be positioned relative to the canvas*/
 }
 
 /* Secret code (2649) for level 3 */
-#secretCode {
+#rlSecretCodeL3 {
 	bottom: 0px;
 	margin: 0px auto;
 	display: none;

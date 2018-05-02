@@ -22,11 +22,11 @@ function rlLevel3() {
 	this.buttonEnter = new Button(460,550,80,80, "Ent");
 	this.circle = new Circle (50,50,50,50,"3");
 
-	var x = document.getElementById("inputBox");
+	var x = document.getElementById("rlInputBoxL3");
 	x.style.display = "block";
 	x.value = "";
 
-	var y = document.getElementById("secretCode");
+	var y = document.getElementById("rlSecretCodeL3");
 	y.style.display = "block";
 }
 
@@ -62,97 +62,109 @@ function rl_level3_click(x, y){
 	console.log("Clicked at: " + x + ", " + y);
 	if(this.button1.hitTest(x, y)){
 		console.log("inputed 1");
-		var x = document.getElementById("inputBox").value;
-		document.getElementById("inputBox").value  = x + "1";
+		var x = document.getElementById("rlInputBoxL3").value;
+		document.getElementById("rlInputBoxL3").value  = x + "1";
 	}
 
 	if(this.button2.hitTest(x, y)){
 		console.log("inputed 2");
-		var x = document.getElementById("inputBox").value;
-		document.getElementById("inputBox").value  = x + "2";
+		var x = document.getElementById("rlInputBoxL3").value;
+		document.getElementById("rlInputBoxL3").value  = x + "2";
 	}
 
 	if(this.button3.hitTest(x, y)){
 		console.log("inputed 3");
-		var x = document.getElementById("inputBox").value;
-		document.getElementById("inputBox").value  = x + "3";
+		var x = document.getElementById("rlInputBoxL3").value;
+		document.getElementById("rlInputBoxL3").value  = x + "3";
 	}
 
 	if(this.button4.hitTest(x, y)){
 		console.log("inputed 4");
-		var x = document.getElementById("inputBox").value;
-		document.getElementById("inputBox").value  = x + "4";
+		var x = document.getElementById("rlInputBoxL3").value;
+		document.getElementById("rlInputBoxL3").value  = x + "4";
 	}
 
 	if(this.button5.hitTest(x, y)){
 		console.log("inputed 5");
-		var x = document.getElementById("inputBox").value;
-		document.getElementById("inputBox").value  = x + "5";	
+		var x = document.getElementById("rlInputBoxL3").value;
+		document.getElementById("rlInputBoxL3").value  = x + "5";	
 	}
 
 	if(this.button6.hitTest(x, y)){
 		console.log("inputed 6");
-		var x = document.getElementById("inputBox").value;
-		document.getElementById("inputBox").value  = x + "6";	
+		var x = document.getElementById("rlInputBoxL3").value;
+		document.getElementById("rlInputBoxL3").value  = x + "6";	
 	}
 
 	if(this.button7.hitTest(x, y)){
 		console.log("inputed 7");
-		var x = document.getElementById("inputBox").value;
-		document.getElementById("inputBox").value  = x + "7";
+		var x = document.getElementById("rlInputBoxL3").value;
+		document.getElementById("rlInputBoxL3").value  = x + "7";
 	}
 
 	if(this.button8.hitTest(x, y)){
 		console.log("inputed 8");
-		var x = document.getElementById("inputBox").value;
-		document.getElementById("inputBox").value  = x + "8";
+		var x = document.getElementById("rlInputBoxL3").value;
+		document.getElementById("rlInputBoxL3").value  = x + "8";
 	}
 
 	if(this.button9.hitTest(x, y)){
 		console.log("inputed 9");
-		var x = document.getElementById("inputBox").value;
-		document.getElementById("inputBox").value  = x + "9";
+		var x = document.getElementById("rlInputBoxL3").value;
+		document.getElementById("rlInputBoxL3").value  = x + "9";
 	}
 
 	if(this.button0.hitTest(x, y)){
 		console.log("inputed 0");
-		var x = document.getElementById("inputBox").value;
-		document.getElementById("inputBox").value  = x + "0";
+		var x = document.getElementById("rlInputBoxL3").value;
+		document.getElementById("rlInputBoxL3").value  = x + "0";
 	}
 
 	if(this.buttonEnter.hitTest(x, y)){
 		console.log("inputed Enter");
-		var x = document.getElementById("inputBox").value;
+		var x = document.getElementById("rlInputBoxL3").value;
+		var y = document.getElementById("rlSecretCodeL3");
+		y.style.display = "none";
 
+		// When enter is clicked and the code is 3279, hide the 
+		// input box and change to level 4
 		if (x === "3279"){
 			console.log("code inputed was: " + x);
-			var x = document.getElementById("inputBox");
-		x.style.display = "none";
+			var x = document.getElementById("rlInputBoxL3");
+			x.style.display = "none";
 			return new rlLevel4();
 		}
 
+		// When enter is clicked and the code is 6349, change
+		// the secret link text to 'Secret Link', input the 
+		// message 'link in menu' in the input box and remove
+		// that message after 3 seconds
 		else if (x === "6249"){
 			console.log("code inputed was: " + x);
 			document.getElementById("secretLinkText").innerHTML = "Secret Link";
-			document.getElementById("inputBox").value = "Link in menu";
+			document.getElementById("rlInputBoxL3").value = "Link in menu";
 			setTimeout(function rlfadeAway(){
-				document.getElementById("inputBox").value = "";
+				document.getElementById("rlInputBoxL3").value = "";
 			} ,3000);
 		}
 
+		// If neither 3279 or 6249 is inputted, change the
+		// canvas to the failed screen
 		else {
 			console.log("code inputed was: " + x);
-			var y = document.getElementById("inputBox");
-			y.style.display = "none";
+			var z = document.getElementById("rlInputBoxL3");
+			z.style.display = "none";
 			return new rlFailed();	
 		}
 	}
 
+	// Using the substring function, remove the last character
+	// of the input box
 	if(this.buttonDelete.hitTest(x, y)){
 		console.log("inputed Delete");
-		var x = document.getElementById("inputBox").value;
+		var x = document.getElementById("rlInputBoxL3").value;
 		var y = x.substring(0, x.length - 1);
-		document.getElementById("inputBox").value = y;
+		document.getElementById("rlInputBoxL3").value = y;
 		console.log("code is now: " + y);
 	}
 

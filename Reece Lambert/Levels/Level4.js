@@ -15,7 +15,7 @@ function rlLevel4(){
 	this.button4 = new Button(450,400,275,80, "Is this still a quiz?");
 	this.circle = new Circle(50,50,50,50,"4");
 
-	var x = document.getElementById("inputBox");
+	var x = document.getElementById("rlInputBoxL3");
 	x.style.display = "none";
 }
 
@@ -26,17 +26,18 @@ function rl_level4_update(){
 function rl_level4_draw(ctx){
 	var x = window.innerWidth;
 
+	//If width of browser window is more than 600px then draw these buttons
 	if (x > 600){
-	this.button1.draw(ctx);
+		this.button1.draw(ctx);
+		this.button2.draw(ctx);
+		this.button3.draw(ctx);
+		this.button4.draw(ctx);
 	}
-
+	// Otherwise draw this single button
 	else {
-	this.buttonAlt1.draw(ctx);
+		this.buttonAlt1.draw(ctx);
 	}
 
-	this.button2.draw(ctx);
-	this.button3.draw(ctx);
-	this.button4.draw(ctx);
 	this.circle.draw(ctx);
 	
 	ctx.font= "40px Gugi";
@@ -46,6 +47,9 @@ function rl_level4_draw(ctx){
 function rl_level4_click(x, y){
 
 	console.log("Clicked at: " + x + ", " + y);
+	// buttons still clickable when not drawn, this is fixed
+	// by using the width of the window as a secondary condition
+	// for the button to work
 	if(this.button1.hitTest(x, y) && window.innerWidth > 600){
 		console.log("Changing level..");
 		return new rlFailed();
@@ -56,17 +60,17 @@ function rl_level4_click(x, y){
 		return new rlLevel5();
 	}
 
-	if(this.button2.hitTest(x, y)){
+	if(this.button2.hitTest(x, y) && window.innerWidth > 600){
 		console.log("Changing level...");
 		return new rlFailed();
 	}
 
-	if(this.button3.hitTest(x, y)){
+	if(this.button3.hitTest(x, y) && window.innerWidth > 600){
 		console.log("Changing level...");
 		return new rlFailed();
 	}
 
-	if(this.button4.hitTest(x, y)){
+	if(this.button4.hitTest(x, y) && window.innerWidth > 600){
 		console.log("Changing level...");
 		return new rlFailed();
 	}
