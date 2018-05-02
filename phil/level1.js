@@ -16,11 +16,14 @@ function pj_level_update(){
 
 function pj_level_draw(ctx){
   this.button1.draw(ctx);
+
+  ctx.font = "30px Arial";
+  ctx.fillText("Try Not To Quit",200,50);
 }
 
 function pj_level_click(x, y){
   if(this.button1.hitTest(x, y)){
-    return new PJMenu();
+    return new PJGameOver();
   }
   return this;
 }
