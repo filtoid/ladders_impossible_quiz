@@ -12,7 +12,7 @@ function rlLevel10() {
 	this.button2 = new Button(450,300,275,80, "Jeff");
 	this.button3 = new Button(75,400,275,80, "Jim");
 	this.button4 = new Button(450,400,275,80, "Shananany");
-	this.circle = new Circle (50,50,50,50,"9");
+	this.circle = new Circle (50,50,50,50,"10");
 }
 
 function rl_level10_update(){
@@ -45,7 +45,7 @@ function rl_level10_click(x, y){
 	}
 
 	if(this.button3.hitTest(x, y)){
-		console.log("Failed...");
+		console.log("Changing Level..");
 		return new rlLevel11();
 	}
 

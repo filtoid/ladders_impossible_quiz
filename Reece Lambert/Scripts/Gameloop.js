@@ -16,7 +16,7 @@ function loadGame(){
 	$(document).keydown(onKeyDown);
 
 	// Do setup code here - make resources/assign things etc
-	cur_screen = new rlLevel9();
+	cur_screen = new rlLevel11();
 	// The following line sets up the game loop
 	setInterval(update, SECONDSBETWEENFRAMES * 500);
 
@@ -33,7 +33,10 @@ function update(){
 	ctx.save();
 
 	//Do you drawing here - make your resources draw themselves
-	cur_screen.update();
+	var retval = cur_screen.update();
+	if(retval != undefined){
+		cur_screen = retval;
+	}
 	cur_screen.draw(ctx);
 	ctx.restore();
 }

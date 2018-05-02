@@ -41,7 +41,7 @@ function rl_level9_click(x, y){
 	}
 
 	if(this.button2.hitTest(x, y)){
-		console.log("Failed...");
+		console.log("Changing Level..");
 		return new rlLevel10();
 	}
 

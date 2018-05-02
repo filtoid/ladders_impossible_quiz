@@ -36,22 +36,22 @@ function rl_level8_click(x, y){
 
 	console.log("Clicked at: " + x + ", " + y);
 	if(this.button1.hitTest(x, y)){
-		console.log("Changing level..");
+		console.log("Failed...");
 		return new rlFailed();
 	}
 
 	if(this.button2.hitTest(x, y)){
-		console.log("Changing level...");
+		console.log("Failed...");
 		return new rlFailed();
 	}
 
 	if(this.button3.hitTest(x, y)){
-		console.log("Changing level...");
+		console.log("Failed...");
 		return new rlFailed();
 	}
 
 	if(this.button4.hitTest(x, y)){
-		console.log("Changing level...");
+		console.log("Failed...");
 		return new rlFailed();
 	}
 

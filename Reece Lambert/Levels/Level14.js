@@ -1,10 +1,10 @@
-function rlLevel10() {
+function rlLevel14() {
 
-	this.update = rl_level10_update;
-	this.draw = rl_level10_draw;
+	this.update = rl_level14_update;
+	this.draw = rl_level14_draw;
 
-	this.click = rl_level10_click;
-    this.mouseMove = rl_level10_mouse_move;
+	this.click = rl_level14_click;
+    this.mouseMove = rl_level14_mouse_move;
 
 	this.firstButtonHighlighted = false;
 
@@ -15,11 +15,11 @@ function rlLevel10() {
 	this.circle = new Circle (50,50,50,50,"9");
 }
 
-function rl_level10_update(){
+function rl_level14_update(){
 
 }
 
-function rl_level10_draw(ctx){
+function rl_level14_draw(ctx){
 	
 	this.button1.draw(ctx);
 	this.button2.draw(ctx);
@@ -31,7 +31,7 @@ function rl_level10_draw(ctx){
 	ctx.fillText("What is my horse called?",150,50);	
 }
 
-function rl_level10_click(x, y){
+function rl_level14_click(x, y){
 
 	console.log("Clicked at: " + x + ", " + y);
 	if(this.button1.hitTest(x, y)){
@@ -57,7 +57,7 @@ function rl_level10_click(x, y){
 	return this;
 }
 
-function rl_level10_mouse_move(x, y){
+function rl_level14_mouse_move(x, y){
 
 	this.button1.hitTest(x, y);
 	this.button2.hitTest(x, y);
