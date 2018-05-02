@@ -13,8 +13,6 @@ function rlLevel7() {
 	this.button3 = new Button(75,400,275,80, "A horse named Jim");
 	this.button4 = new Button(450,400,275,80, "A rubber");
 	this.circle = new Circle (50,50,50,50,"7");
-
-	new fuckPlzWork()
 }
 
 function rl_level7_update(){
@@ -38,8 +36,8 @@ function rl_level7_click(x, y){
 
 	console.log("Clicked at: " + x + ", " + y);
 	if(this.button1.hitTest(x, y)){
-		console.log("Changing Level..");
-		return new rlLevel7();
+		console.log("Failed...");
+		return new rlFailed();
 	}
 
 	if(this.button2.hitTest(x, y)){
@@ -68,23 +66,11 @@ function rl_level7_mouse_move(x, y){
 	this.button4.hitTest(x, y);
 }
 
-function fuckPlzWork() {
-	setInterval(function(event) {
-		var x = event.keyCode;
-		console.log(x);
-		if (x == 119) {
-			console.log(x);
-			return new rlLevel8;
-		}
-	}, 1000);
+function rlMKeyPressed() {
+	var x = document.getElementById("rlInputBoxL7");
+	if (x.value == "m" || x.value == "M") {
+		console.log("Changing Level..");
+		x.style.display = "none";
+		return new rlLevel8();
+	}
 }
-
-
-/* if (document.keypress == "M" || document.keypress == "m") {
-			console.log(document.keypress);
-			return new rlLevel8;
-		}
-		else {
-			console.log(document.keypress);
-		}
-		*/

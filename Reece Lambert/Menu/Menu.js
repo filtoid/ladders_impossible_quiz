@@ -17,13 +17,12 @@ function rlMenu(){
 	this.button2 = new Button(450,300,275,80, "Instructions");
 	this.button3 = new Button(75,400,275,80, "Credits");
 
-	//For the input box in level 3
+	//For the input box in lvl 3, hidden until lvl 3
 
-	var x = document.getElementById("inputBox");
-
+	var x = document.getElementById("rlInputBoxL3");
 	x.style.display = "none";
 
-	//For the secret link that appears in the menu after 6249 on level 3
+	//For the secret link that appears in the menu after 6249 on lvl 3
 
 	var y = document.getElementById("secretLinkText");
 

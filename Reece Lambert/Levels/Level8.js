@@ -11,6 +11,8 @@ function rlLevel8(){
 	this.button1 = new Button(75,300,275,80, "Start");
 	this.button2 = new Button(450,300,275,80, "Instructions");
 	this.button3 = new Button(75,400,275,80, "Credits");
+	this.button4 = new Button(450,400,275,80, "A rubber");
+	this.circle = new Circle (50,50,50,50,"8");
 }
 
 function rl_level8_update(){
@@ -22,6 +24,9 @@ function rl_level8_draw(ctx){
 	this.button1.draw(ctx);
 	this.button2.draw(ctx);
 	this.button3.draw(ctx);
+	this.button4.draw(ctx);
+
+	this.circle.draw(ctx);
 
 	ctx.font= "40px Gugi";
 	ctx.fillText("The Highly Improbable Quiz",140,50);

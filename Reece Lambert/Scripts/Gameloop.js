@@ -18,7 +18,8 @@ function loadGame(){
 	cur_screen = new rlMenu();
 	// The following line sets up the game loop
 	setInterval(update, SECONDSBETWEENFRAMES * 500);
-  console.log("We have loaded the game");
+
+	console.log("We have loaded the game");
 }
 
 function update(){
