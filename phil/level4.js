@@ -13,8 +13,7 @@ function PJLevel4(){
         this.buttons[i].textColor = "#000000";
     }
     this.buttonMovingUp = false;
-    // this.img = new Image();
-    // this.img.src = "pic.jpg";
+
     
   }
   
@@ -52,12 +51,12 @@ function PJLevel4(){
   }
   
   function pj_level4_click(x, y){
-    // for(var i=0; i<this.buttons.length; i++){
-    //     if(this.buttons[i].hitTest(x, y)){
-    //         // Move to next level
+    for(var i=0; i<this.buttons.length; i++){
+        if(this.buttons[i].hitTest(x, y)){
+            return new PJCongratulations();
             
-    //     }
-    //   }
+        }
+      }
     return this;
   }
   
