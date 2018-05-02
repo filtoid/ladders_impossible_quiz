@@ -23,6 +23,8 @@ function LWlevel3(){
   this.button4.colorHighlighted = '#ffbc70'
   this.button4.textColor = '#000000'
 
+    this.message = ""
+
   this.img1 = new Image();
   this.img1.src = "Images/broadsword.jpg";
   this.img2 = new Image();
@@ -51,15 +53,35 @@ ctx.drawImage(this.img1, 180, 150, 200, 150);
 ctx.drawImage(this.img2, 585, 150, 200, 150);
 ctx.drawImage(this.img3, 200, 400, 200, 150);
 ctx.drawImage(this.img4, 585, 400, 200, 150);
+ctx.fillText(this.message, 20, 80)
+ctx.fillStyle = '#00000'
 
 
 
 }
 
 
-function lw_level3_click(){
+function lw_level3_click(x, y){
 
+  if(this.button1.hitTest(x, y)){
+this.message = "Try Again"
+this.button1.text = "Incorrect!"
+this.button1.color = "#808080"
+this.button1.colorHighlighted = "#808080"}
 
+if(this.button2.hitTest(x, y)){
+this.message = "Try Again"
+this.button2.text = "Incorrect!"
+this.button2.color = "#808080"
+this.button2.colorHighlighted = "#808080"}
+
+if(this.button4.hitTest(x, y)){
+this.message = "Try Again"
+this.button4.text = "Incorrect!"
+this.button4.color = "#808080"
+this.button4.colorHighlighted = "#808080"
+}
+return this;
 }
 
 function lw_level3_mouse_move(x, y){
