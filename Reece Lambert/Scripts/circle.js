@@ -6,7 +6,7 @@ function Circle(_x, _y, _w, _h, _text){
   this.loc = new Location(_x, _y);
   this.size = new Location(_w, _h);
   this.color = "#404040";
-  this.colorHighlighted = "#404040";
+  this.colorHighlighted = "#828282";
   this.text = _text;
   this.textColor = "#000000";
   this.highlighted = false;
