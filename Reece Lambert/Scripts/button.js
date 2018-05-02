@@ -10,6 +10,7 @@ function Button(_x, _y, _w, _h, _text){
   this.text = _text;
   this.textColor = "#000000";
   this.highlighted = false;
+  this.hovered = false;
 
   this.draw = button_draw;
   this.draw2 = button_draw2;
@@ -46,7 +47,9 @@ function button_draw2(ctx){
 
   if(this.highlighted){
     ctx.fillStyle = this.colorHighlighted;
-  }else{
+  }
+  
+  else {
     ctx.fillStyle = this.color;
   }
   ctx.font = "40px Gugi";
@@ -68,9 +71,24 @@ function button_hit_test(x, y){
     this.highlighted = true;
     document.body.style.cursor = "pointer";
     return true;
-  }else{
+  }
+  
+  else {
     this.highlighted = false;
     document.body.style.cursor = "default";
+    return false;
+  }
+  return false;
+}
+
+function button_hover_test(x, y){
+  if(x > this.loc.x && x < this.loc.x + this.size.x && y > this.loc.y && y < this.loc.y + this.size.y){
+    this.hovered = true;
+    return true;
+  }
+  
+  else {
+    this.hovered = false;
     return false;
   }
   return false;

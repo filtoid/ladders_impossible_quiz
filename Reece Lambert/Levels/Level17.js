@@ -8,11 +8,11 @@ function rlLevel17() {
 
 	this.firstButtonHighlighted = false;
 
-	this.button1 = new Button(75,300,275,80, "Jerry");
-	this.button2 = new Button(450,300,275,80, "Jeff");
-	this.button3 = new Button(75,400,275,80, "Jim");
-	this.button4 = new Button(450,400,275,80, "Shananany");
-	this.circle = new Circle (50,50,50,50,"9");
+	this.button1 = new Button(75,300,275,80, "It's hiding");
+	this.button2 = new Button(450,300,275,80, "Ransomware");
+	this.button3 = new Button(75,400,275,80, "Killed by virus");
+	this.button4 = new Button(450,400,275,80, "Went to get mail");
+	this.circle = new Circle (50,50,50,50,"17");
 }
 
 function rl_level17_update(){
@@ -28,7 +28,8 @@ function rl_level17_draw(ctx){
 	this.circle.draw(ctx);
 
 	ctx.font= "40px Gugi";
-	ctx.fillText("What is my horse called?",150,50);	
+	ctx.fillText("Where did the blackmailing",150,50);
+	ctx.fillText("computer go?",270,100);
 }
 
 function rl_level17_click(x, y){
@@ -40,8 +41,8 @@ function rl_level17_click(x, y){
 	}
 
 	if(this.button2.hitTest(x, y)){
-		console.log("Failed...");
-		return new rlFailed();
+		console.log("Changing Level..");
+		return new rlLevel18();
 	}
 
 	if(this.button3.hitTest(x, y)){
