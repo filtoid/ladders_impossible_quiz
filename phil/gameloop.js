@@ -17,7 +17,7 @@ function loadGame(){
 	$(document).keydown(onKeyDown);
 
 	// Do setup code here - make resources/assign things etc
-  cur_screen = new PJMenu();
+	cur_screen = new PJMenu();
 
 	// The following line sets up the game loop
 	setInterval(update, SECONDSBETWEENFRAMES * 500);
