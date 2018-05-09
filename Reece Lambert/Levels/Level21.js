@@ -28,7 +28,7 @@ function rl_level21_draw(ctx){
 	this.circle.draw(ctx);
 
 	ctx.font= "40px Gugi";
-	ctx.fillText("WhAt'S nInE pLuS tEn?!?",170,50);
+	ctx.fillText("What's nine plus ten?",170,50);
 }
 
 function rl_level21_click(x, y){
