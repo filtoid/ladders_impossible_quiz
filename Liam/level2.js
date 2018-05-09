@@ -18,8 +18,8 @@ function LWlevel2(){
   this.message = ""
 
 
-this.img = new Image();
-this.img.src = "Images/Beholder.png";
+  this.img = new Image();
+  this.img.src = "Images/Beholder.png";
 }
 
 function lw_level2_update(){
@@ -27,7 +27,7 @@ function lw_level2_update(){
 }
 
 function lw_level2_draw(ctx){
-ctx.drawImage(this.img, 200, 50, 600, 400);
+  ctx.drawImage(this.img, 200, 50, 600, 400);
 
   this.button1.draw(ctx);
   this.button2.draw(ctx);
@@ -42,10 +42,10 @@ function lw_level2_click(x, y){
     return new LWlevel3();
   }
   if(this.button2.hitTest(x, y)){
-this.message = "Try Again"
-this.button2.text = "Incorrect!"
-this.button2.color = "#808080"
-this.button2.colorHighlighted = "#808080"
+    this.message = "Try Again"
+    this.button2.text = "Incorrect!"
+    this.button2.color = "#808080"
+    this.button2.colorHighlighted = "#808080"
   }
   return this;
 }

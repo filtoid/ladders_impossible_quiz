@@ -64,24 +64,30 @@ ctx.fillStyle = '#00000'
 function lw_level3_click(x, y){
 
   if(this.button1.hitTest(x, y)){
-this.message = "Try Again"
-this.button1.text = "Incorrect!"
-this.button1.color = "#808080"
-this.button1.colorHighlighted = "#808080"}
+    this.message = "Try Again"
+    this.button1.text = "Incorrect!"
+    this.button1.color = "#808080"
+    this.button1.colorHighlighted = "#808080"
+  }
 
-if(this.button2.hitTest(x, y)){
-this.message = "Try Again"
-this.button2.text = "Incorrect!"
-this.button2.color = "#808080"
-this.button2.colorHighlighted = "#808080"}
+  if(this.button2.hitTest(x, y)){
+    this.message = "Try Again"
+    this.button2.text = "Incorrect!"
+    this.button2.color = "#808080"
+    this.button2.colorHighlighted = "#808080"
+  }
 
-if(this.button4.hitTest(x, y)){
-this.message = "Try Again"
-this.button4.text = "Incorrect!"
-this.button4.color = "#808080"
-this.button4.colorHighlighted = "#808080"
-}
-return this;
+  if(this.button4.hitTest(x, y)){
+    this.message = "Try Again"
+    this.button4.text = "Incorrect!"
+    this.button4.color = "#808080"
+    this.button4.colorHighlighted = "#808080"
+  }
+  
+  if(this.button3.hitTest(x, y)){
+    return new LWlevel4();
+  }
+  return this;
 }
 
 function lw_level3_mouse_move(x, y){
