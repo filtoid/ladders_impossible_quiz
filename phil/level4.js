@@ -54,7 +54,6 @@ function PJLevel4(){
     for(var i=0; i<this.buttons.length; i++){
         if(this.buttons[i].hitTest(x, y)){
             return new PJCongratulations();
-            
         }
       }
     return this;
