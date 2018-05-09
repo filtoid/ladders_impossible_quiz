@@ -40,7 +40,7 @@ function LWlevel4(){
   
   function lw_level4_click(x, y){
     if (this.button1.hitTest(x, y)) {
-        return new LWlevel3();
+        return new LWlevel5();
       }
       if(this.button2.hitTest(x, y)){
         this.message = "Try Again"
