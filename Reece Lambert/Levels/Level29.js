@@ -12,7 +12,7 @@ function rlLevel29() {
 	this.button2 = new Button(450,300,275,80, "Eagerly");
 	this.button3 = new Button(75,400,275,80, "You can't");
 	this.button4 = new Button(450,400,275,80, "With ease");
-	this.circle = new Circle (50,50,50,50,"2");
+	this.circle = new Circle (50,50,50,50,"29");
 }
 
 function rl_level29_update(){
@@ -28,7 +28,7 @@ function rl_level29_draw(ctx){
 	this.circle.draw(ctx);
 
 	ctx.font= "40px Gugi";
-	ctx.fillText("How should you start an ",170,50);
+	ctx.fillText("How should you end an ",180,50);
 	ctx.fillText("impossible quiz?",240,100);
 }
 
@@ -47,7 +47,7 @@ function rl_level29_click(x, y){
 
 	if(this.button3.hitTest(x, y)){
 		console.log("Changing level...");
-		return new rlLevel3();
+		return new rlLevel30();
 	}
 
 	if(this.button4.hitTest(x, y)){

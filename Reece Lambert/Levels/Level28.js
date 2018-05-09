@@ -8,11 +8,11 @@ function rlLevel28() {
 
 	this.firstButtonHighlighted = false;
 
-	this.button1 = new Button(75,300,275,80, "Carefully");
-	this.button2 = new Button(450,300,275,80, "Eagerly");
-	this.button3 = new Button(75,400,275,80, "You can't");
-	this.button4 = new Button(450,400,275,80, "With ease");
-	this.circle = new Circle (50,50,50,50,"2");
+	this.button1 = new Button(75,300,275,80, "AH!");
+	this.button2 = new Button(450,300,275,80, "EZ!");
+	this.button3 = new Button(75,400,275,80, "CG!");
+	this.button4 = new Button(450,400,275,80, "TV!");
+	this.circle = new Circle (50,50,50,50,"28");
 }
 
 function rl_level28_update(){
@@ -28,16 +28,16 @@ function rl_level28_draw(ctx){
 	this.circle.draw(ctx);
 
 	ctx.font= "40px Gugi";
-	ctx.fillText("How should you start an ",170,50);
-	ctx.fillText("impossible quiz?",240,100);
+	ctx.fillText("Which one of these is an",160,50);
+	ctx.fillText("element?",320,100);
 }
 
 function rl_level28_click(x, y){
 
 	console.log("Clicked at: " + x + ", " + y);
 	if(this.button1.hitTest(x, y)){
-		console.log("Failed...");
-		return new rlFailed();
+		console.log("Changing Level..");
+		return new rlLevel29();
 	}
 
 	if(this.button2.hitTest(x, y)){
@@ -46,8 +46,8 @@ function rl_level28_click(x, y){
 	}
 
 	if(this.button3.hitTest(x, y)){
-		console.log("Changing level...");
-		return new rlLevel3();
+		console.log("Failed..");
+		return new rlFailed();
 	}
 
 	if(this.button4.hitTest(x, y)){

@@ -8,11 +8,11 @@ function rlLevel27() {
 
 	this.firstButtonHighlighted = false;
 
-	this.button1 = new Button(75,300,275,80, "Carefully");
-	this.button2 = new Button(450,300,275,80, "Eagerly");
-	this.button3 = new Button(75,400,275,80, "You can't");
-	this.button4 = new Button(450,400,275,80, "With ease");
-	this.circle = new Circle (50,50,50,50,"2");
+	this.button1 = new Button(75,300,275,80, "C6");
+	this.button2 = new Button(450,300,275,80, "E1");
+	this.button3 = new Button(75,400,275,80, "K9");
+	this.button4 = new Button(450,400,275,80, "H13");
+	this.circle = new Circle (50,50,50,50,"27");
 }
 
 function rl_level27_update(){
@@ -28,8 +28,8 @@ function rl_level27_draw(ctx){
 	this.circle.draw(ctx);
 
 	ctx.font= "40px Gugi";
-	ctx.fillText("How should you start an ",170,50);
-	ctx.fillText("impossible quiz?",240,100);
+	ctx.fillText("What coordinate is good at",150,50);
+	ctx.fillText("chewing?",320,100);
 }
 
 function rl_level27_click(x, y){
@@ -46,8 +46,8 @@ function rl_level27_click(x, y){
 	}
 
 	if(this.button3.hitTest(x, y)){
-		console.log("Changing level...");
-		return new rlLevel3();
+		console.log("Changing level..");
+		return new rlLevel28();
 	}
 
 	if(this.button4.hitTest(x, y)){
