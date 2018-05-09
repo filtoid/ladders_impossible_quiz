@@ -24,7 +24,7 @@ this.button1.draw(ctx)
   ctx.fillStyle = '#00000'
   ctx.fillText("Quiz Idea - Liam Watson",275,200);
   ctx.fillStyle = '#00000'
-  ctx.fillText("Images - Wizards of the Coast",275,350);
+  ctx.fillText("Images - Wizards of the Coast-Pedigree-Various Other Sites",175,350);
   ctx.fillStyle = '#00000'
 
 }
