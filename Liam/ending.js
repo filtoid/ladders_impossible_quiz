@@ -7,8 +7,8 @@ function LWending(){
   
     this.firstButtonHighlighted = false;
     this.button1 = new Button(350, 160, 300, 200, "Return to Menu");
-    this.button1.color = '#f28f04'
-    this.button1.colorHighlighted = '#ffbc70'
+    this.button1.color = '#009933'
+    this.button1.colorHighlighted = '#66ff33'
     this.button1.textColor = '#000000'
    
   }

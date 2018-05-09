@@ -7,12 +7,12 @@ function LWMenu(){
 
   this.firstButtonHighlighted = false;
   this.button1 = new Button(250, 160, 450, 150, "Start");
-  this.button1.color = '#f28f04'
-  this.button1.colorHighlighted = '#ffbc70'
+  this.button1.color = '#009933'
+  this.button1.colorHighlighted = '#66ff33'
   this.button1.textColor = '#000000'
   this.button2 = new Button(250, 375, 450, 150, "Credits");
-  this.button2.color = '#f28f04'
-  this.button2.colorHighlighted = '#ffbc70'
+  this.button2.color = '#009933'
+  this.button2.colorHighlighted = '#66ff33'
   this.button2.textColor = '#000000'
 }
 
