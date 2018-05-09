@@ -9,7 +9,8 @@ body {
 canvas, as they will be positioned relative to the canvas*/
 #canvas, #secretLinkAtr, #secretLinkAtr #secretLinkText, 
 #rlInputCodeL3, #rlInputCodeL3 #rlInputBoxL3, #rlInputCodeL18, 
-#rlInputCodeL18 #rlInputBoxL18  {
+#rlInputCodeL18 #rlInputBoxL18, #rlInputCodeL26, 
+#rlInputCodeL26 #rlInputBoxL26  {
 	position: absolute;
 }
 
@@ -69,8 +70,26 @@ canvas, as they will be positioned relative to the canvas*/
     border-radius: 20px;
 }
 
+/* input box for level 26 */
+#rlInputCodeL26 {
+	text-align: center;
+	z-index: 1;
+}
+
+#rlInputCodeL26 #rlInputBoxL26 {
+	display: none;
+	text-align: center;
+	font: 40px "Gugi";
+	color: #000000;
+    width: 430px;
+	height: 80px;
+	left: 100px;
+	top: 238px;
+    border-radius: 20px;
+}
+
 /* Secret code (2649) for level 3 */
-#rlSecretCodeL3 {
+#rlSecretCodeL3_26 {
 	bottom: 0px;
 	margin: 0px auto;
 	display: none;

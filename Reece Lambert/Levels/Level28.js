@@ -1,10 +1,10 @@
-function rlLevel2() {
+function rlLevel28() {
 
-	this.update = rl_level2_update;
-	this.draw = rl_level2_draw;
+	this.update = rl_level28_update;
+	this.draw = rl_level28_draw;
 
-	this.click = rl_level2_click;
-    this.mouseMove = rl_level2_mouse_move;
+	this.click = rl_level28_click;
+    this.mouseMove = rl_level28_mouse_move;
 
 	this.firstButtonHighlighted = false;
 
@@ -15,11 +15,11 @@ function rlLevel2() {
 	this.circle = new Circle (50,50,50,50,"2");
 }
 
-function rl_level2_update(){
+function rl_level28_update(){
 	
 }
 
-function rl_level2_draw(ctx){
+function rl_level28_draw(ctx){
 	
 	this.button1.draw(ctx);
 	this.button2.draw(ctx);
@@ -32,7 +32,7 @@ function rl_level2_draw(ctx){
 	ctx.fillText("impossible quiz?",240,100);
 }
 
-function rl_level2_click(x, y){
+function rl_level28_click(x, y){
 
 	console.log("Clicked at: " + x + ", " + y);
 	if(this.button1.hitTest(x, y)){
@@ -58,7 +58,7 @@ function rl_level2_click(x, y){
 	return this;
 }
 
-function rl_level2_mouse_move(x, y){
+function rl_level28_mouse_move(x, y){
 
 	this.button1.hitTest(x, y);
 	this.button2.hitTest(x, y);

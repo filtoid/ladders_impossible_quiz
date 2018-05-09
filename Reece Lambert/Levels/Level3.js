@@ -26,7 +26,7 @@ function rlLevel3() {
 	x.style.display = "block";
 	x.value = "";
 
-	var y = document.getElementById("rlSecretCodeL3");
+	var y = document.getElementById("rlSecretCodeL3_26");
 	y.style.display = "block";
 }
 
@@ -123,12 +123,12 @@ function rl_level3_click(x, y){
 	if(this.buttonEnter.hitTest(x, y)){
 		console.log("inputed Enter");
 		var x = document.getElementById("rlInputBoxL3").value;
-		var y = document.getElementById("rlSecretCodeL3");
+		var y = document.getElementById("rlSecretCodeL3_26");
 		y.style.display = "none";
 
 		// When enter is clicked and the code is 3279, hide the 
 		// input box and change to level 4
-		if (x === "3279"){
+		if (x == "3279"){
 			console.log("code inputed was: " + x);
 			var x = document.getElementById("rlInputBoxL3");
 			x.style.display = "none";
@@ -139,7 +139,7 @@ function rl_level3_click(x, y){
 		// the secret link text to 'Secret Link', input the 
 		// message 'link in menu' in the input box and remove
 		// that message after 3 seconds
-		else if (x === "6249"){
+		else if (x == "6249"){
 			console.log("code inputed was: " + x);
 			document.getElementById("secretLinkText").innerHTML = "Secret Link";
 			document.getElementById("rlInputBoxL3").value = "Link in menu";
@@ -150,7 +150,7 @@ function rl_level3_click(x, y){
 
 		// When enter is clicked and the code is 1472580369, hide  
 		// the input box and change to level 21
-		else if  (x === "1472580369"){
+		else if  (x == "1472580369"){
 			console.log("code inputed was: " + x);
 			var x = document.getElementById("rlInputBoxL3");
 			x.style.display = "none";

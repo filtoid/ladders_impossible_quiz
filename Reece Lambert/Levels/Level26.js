@@ -1,67 +1,68 @@
-function rlLevel2() {
+function rlLevel26() {
 
-	this.update = rl_level2_update;
-	this.draw = rl_level2_draw;
+	this.update = rl_level26_update;
+	this.draw = rl_level26_draw;
 
-	this.click = rl_level2_click;
-    this.mouseMove = rl_level2_mouse_move;
+	this.click = rl_level26_click;
+    this.mouseMove = rl_level26_mouse_move;
 
 	this.firstButtonHighlighted = false;
 
-	this.button1 = new Button(75,300,275,80, "Carefully");
-	this.button2 = new Button(450,300,275,80, "Eagerly");
-	this.button3 = new Button(75,400,275,80, "You can't");
-	this.button4 = new Button(450,400,275,80, "With ease");
-	this.circle = new Circle (50,50,50,50,"2");
+	this.buttonEnt = new Button(580,240,100,80, "Ent");
+	this.circle = new Circle (50,50,50,50,"26");
+
+	var x = document.getElementById("rlInputBoxL26");
+	x.style.display = "block";
+
+	var y = document.getElementById("rlSecretCodeL3_26")
+	y.innerHTML = "My name is Jim...";
+	y.style.display = "block";
 }
 
-function rl_level2_update(){
+function rl_level26_update(){
 	
 }
 
-function rl_level2_draw(ctx){
+function rl_level26_draw(ctx){
 	
-	this.button1.draw(ctx);
-	this.button2.draw(ctx);
-	this.button3.draw(ctx);
-	this.button4.draw(ctx);
+	this.buttonEnt.draw(ctx);
 	this.circle.draw(ctx);
 
 	ctx.font= "40px Gugi";
-	ctx.fillText("How should you start an ",170,50);
-	ctx.fillText("impossible quiz?",240,100);
+	ctx.fillText("My name has been lost on",160,50);
+	ctx.fillText("this page. What am I?",200,100);
+	ctx.fillText("I am a...",300,200);
 }
 
-function rl_level2_click(x, y){
+function rl_level26_click(x, y){
 
 	console.log("Clicked at: " + x + ", " + y);
-	if(this.button1.hitTest(x, y)){
-		console.log("Failed...");
-		return new rlFailed();
-	}
+	if(this.buttonEnt.hitTest(x, y)){
+		var x = document.getElementById("rlInputBoxL26");
+		var y = document.getElementById("rlSecretCodeL3_26");
 
-	if(this.button2.hitTest(x, y)){
-		console.log("Failed...");
-		return new rlFailed();
-	}
+		if (x.value == "Horse" || x.value == "horse" || x.value == "HORSE") {
+			console.log("Changing Level..");
+			y.style.display = "none";
+			x.style.display = "none";
+			return new rlLevel27;
+		}
 
-	if(this.button3.hitTest(x, y)){
-		console.log("Changing level...");
-		return new rlLevel3();
-	}
+		else if (x.value == "Jim" || x.value == "jim" || x.value == "JIM") {
+			x.value = "Not Exactly";
+		}
 
-	if(this.button4.hitTest(x, y)){
-		console.log("Failed...");
-		return new rlFailed();
+		else {
+			console.log("Failed...");
+			y.style.display = "none";
+			x.style.display = "none";
+			return new rlFailed;
+		}
 	}
-	
 	return this;
 }
 
-function rl_level2_mouse_move(x, y){
+function rl_level26_mouse_move(x, y){
 
-	this.button1.hitTest(x, y);
-	this.button2.hitTest(x, y);
-	this.button3.hitTest(x, y);
-	this.button4.hitTest(x, y);
+	this.buttonEnt.hitTest(x, y);
 }
